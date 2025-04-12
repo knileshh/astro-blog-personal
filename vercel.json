@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "**/*.mjs": {
+      "runtime": "nodejs18"
+    }
+  },
+  "build": {
+    "env": {
+      "NODE_VERSION": "18"
+    }
+  }
+}
