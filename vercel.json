@@ -2,7 +2,10 @@
   "version": 2,
   "functions": {
     "**/*.mjs": {
-      "runtime": "@vercel/node@2.x"
+      "runtime": "@vercel/node@18"
+    },
+    "api/**/*.js": {
+      "runtime": "@vercel/node@18"
     }
   },
   "build": {
