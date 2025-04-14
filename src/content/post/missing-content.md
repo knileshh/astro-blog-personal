@@ -1,7 +1,7 @@
 ---
 title: "First thought, First blog"
 description: "I'm an avid learner always try to keep learning about something new whether it's low latency system, distributed computing or high performance computing."
-publishDate: "14 Arp 2025"
+publishDate: "14 Apr 2025"
 tags: ["first", "random"]
 ---
 
