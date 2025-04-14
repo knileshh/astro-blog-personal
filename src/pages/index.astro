@@ -8,14 +8,14 @@ import SkillLayout from '../components/SkillLayout.astro'
 import PostPreview from '@/components/blog/PostPreview.astro'
 
 import { Image } from 'astro:assets'
-import astro from '../assets/about-astro.png'
+import profilePicture from '../assets/profilePicture.jpeg'
 
 import { getAllPosts, sortMDByDate } from '@/utils'
 
-const languages = ['lorem', 'ipsum']
-const frontend = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
-const backend = ['lorem', 'ipsum', 'lorem', 'ipsum']
-const others = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
+const languages = ['Java', 'JavaScript', 'Python', 'TypeScript', 'Rust', 'Go']
+const frontend = ['React', 'Astro', 'Next.js', 'Svelte', 'Angular', 'Veu']
+const backend = ['Node.js', 'Bun.js', 'Nginx', 'Docker']
+const others = ['Linux', 'Git', 'Digital Ocean', 'Vim']
 
 const MAX_POSTS = 10
 const allPosts = await getAllPosts()
@@ -25,17 +25,20 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 <PageLayout meta={{ title: 'Home' }}>
 	<div class='flex w-full flex-col gap-y-10'>
 		<section class='flex flex-col items-center gap-y-7'>
-			<Image
-				src={astro}
-				alt='profile photo'
-				class='h-28 w-auto rounded-full bg-[#FFBE98] p-2'
-				loading='eager'
-			/>
+			<div class="relative group">
+				<div class="absolute inset-0 rounded-full bg-gradient-to-r from-white/5 to-green-500/5 blur-lg group-hover:blur-xl transition-all duration-500"></div>
+				<Image
+					src={profilePicture}
+					alt='profile photo'
+					class='relative h-28 w-auto rounded-full bg-white p-1 shadow-[0_0_20px_rgba(34,197,94,0.2)] group-hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transition-all duration-500'
+					loading='eager'
+				/>
+			</div>
 
 			<div class='flex flex-col items-center gap-y-4'>
-				<h1 class='text-3xl font-bold'>Lorem ipsum dolor</h1>
+				<h1 class='text-3xl font-bold'>Nilesh Kumar</h1>
 				<a
-					href='https://github.com/srleom/astro-theme-resume.git'
+					href='https://github.com/knileshh'
 					class='flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
 				>
 					<span class='relative flex items-center justify-center'>
@@ -45,18 +48,18 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 						<span class='relative inline-flex h-2 w-2 rounded-full bg-green-400'></span>
 					</span>
 
-					<p class='font-medium'>Get free template</p>
+					<p class='font-medium'>Learning</p>
 				</a>
 				<div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
-					<Label title='Lorem Ipsum'>
-						<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='h-5 w-5' slot='icon'
+					<Label title="MCA'26 VIT Vellore">
+						<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' preserveAspectRatio='xMidYMid meet' class='h-5 w-5' slot='icon'
 							><path
 								fill='currentColor'
-								d='M4.615 20q-.69 0-1.152-.462Q3 19.075 3 18.385v-9.77q0-.69.463-1.152Q3.925 7 4.615 7H9V5.615q0-.69.463-1.152Q9.925 4 10.615 4h2.77q.69 0 1.153.463q.462.462.462 1.152V7h4.385q.69 0 1.152.463q.463.462.463 1.152v9.77q0 .69-.462 1.152q-.463.463-1.153.463zm0-1h14.77q.23 0 .423-.192q.192-.193.192-.423v-9.77q0-.23-.192-.423Q19.615 8 19.385 8H4.615q-.23 0-.423.192Q4 8.385 4 8.615v9.77q0 .23.192.423q.193.192.423.192M10 7h4V5.615q0-.23-.192-.423Q13.615 5 13.385 5h-2.77q-.23 0-.423.192q-.192.193-.192.423zM4 19V8z'
+								d='M 25.037109 2 A 1.0001 1.0001 0 0 0 24.576172 2.09375 L 2.5761719 12.380859 A 1.0001 1.0001 0 0 0 2 13.285156 L 2 15 A 1.0001 1.0001 0 0 0 3 16 L 5 16 C 5 17.29975 5.8348345 18.43211 7 18.833984 L 7 37.150391 C 5.8280314 37.539726 5 38.695112 5 40 L 5 41 L 4.8457031 41 C 3.2400822 41 2 42.397208 2 44 L 2 47 L 48 47 L 48 44 C 48 42.397208 46.759918 41 45.154297 41 L 45 41 L 45 40 C 45 38.695112 44.171969 37.539726 43 37.150391 L 43 18.833984 C 44.165166 18.43211 45 17.29975 45 16 L 47 16 A 1.0001 1.0001 0 0 0 48 15 L 48 13.285156 A 1.0001 1.0001 0 0 0 47.423828 12.380859 L 25.423828 2.09375 A 1.0001 1.0001 0 0 0 25.037109 2 z M 25 4.1035156 L 46 13.921875 L 46 14 L 4 14 L 4 13.921875 L 25 4.1035156 z M 7 16 L 43 16 C 43 16.5883 42.580604 17 42.091797 17 L 22 17 L 18 17 L 7.9082031 17 C 7.4193959 17 7 16.5883 7 16 z M 9 19 L 11 19 L 11 37 L 9 37 L 9 19 z M 13 19 L 17 19 L 17 37 L 13 37 L 13 19 z M 19 19 L 21 19 L 21 37 L 19 37 L 19 19 z M 23 19 L 27 19 L 27 37 L 23 37 L 23 19 z M 29 19 L 31 19 L 31 37 L 29 37 L 29 19 z M 33 19 L 37 19 L 37 37 L 33 37 L 33 19 z M 39 19 L 41 19 L 41 37 L 39 37 L 39 19 z M 7.8457031 39 L 18 39 L 22 39 L 42.154297 39 C 42.588676 39 43 39.394792 43 40 L 43 41 L 7 41 L 7 40 C 7 39.394792 7.411324 39 7.8457031 39 z M 4.8457031 43 L 45.154297 43 C 45.588676 43 46 43.394792 46 44 L 46 45 L 4 45 L 4 44 C 4 43.394792 4.411324 43 4.8457031 43 z'
 							></path></svg
 						>
 					</Label>
-					<Label title='Ipsum'>
+					<Label title='India | Remote'>
 						<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='h-5 w-5' slot='icon'
 							><path
 								fill='currentColor'
@@ -87,10 +90,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
 		<Section title='About'>
 			<p class='text-muted-foreground'>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis atque quia omnis
-				consectetur, voluptas praesentium veniam blanditiis ratione asperiores accusantium laborum
-				odit commodi quis deserunt incidunt et dolor iure ut! Lorem ipsum dolor sit, amet
-				consectetur adipisicing elit. Alias quia, doloribus ut beatae perspiciatis voluptatibus.
+				Avid learner, passionate about Computer Science and Engineering, learning about advanced data structure and algorithms, loves to build solutions for real life problems. <br>Full Stack developer.
 			</p>
 		</Section>
 		{
