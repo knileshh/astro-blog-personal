@@ -225,15 +225,45 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 	</div>
 	<a
 		href='https://monkeytype.com/profile/itsmek'
-		class='mt-16 flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
+		class='mt-16 flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md group'
 	>
 		<span class='relative flex items-center justify-center'>
-			<span
-				class='absolute inline-flex h-2 w-2 animate-ping rounded-full border border-green-400 bg-green-400 opacity-75'
-			></span>
-			<span class='relative inline-flex h-2 w-2 rounded-full bg-green-400'></span>
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-400 group-hover:text-green-500 transition-colors duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" class="animate-[zap_1.5s_cubic-bezier(0.4,0,0.2,1)_infinite]"></path>
+			</svg>
+			<span class="absolute inset-0 bg-green-400/20 rounded-full blur-sm group-hover:bg-green-500/20 transition-colors duration-300 animate-[pulse_3s_cubic-bezier(0.4,0,0.2,1)_infinite]"></span>
 		</span>
 
-		<p class='font-medium'>Typing 100+ WPM</p>
+		<p class='font-medium group-hover:text-green-500 transition-colors duration-300'>100+ WPM </p>
 	</a>
+	<style>
+		@keyframes zap {
+			0%, 100% {
+				transform: scale(1) rotate(0deg);
+				opacity: 1;
+			}
+			25% {
+				transform: scale(1.1) rotate(-5deg);
+				opacity: 0.9;
+			}
+			50% {
+				transform: scale(1.2) rotate(5deg);
+				opacity: 0.8;
+			}
+			75% {
+				transform: scale(1.1) rotate(-5deg);
+				opacity: 0.9;
+			}
+		}
+		@keyframes pulse {
+			0%, 100% {
+				transform: scale(1);
+				opacity: 0.2;
+			}
+			50% {
+				transform: scale(1.8);
+				opacity: 0.3;
+			}
+		}
+	</style>
 </PageLayout>
