@@ -43,6 +43,12 @@ export default defineConfig({
 	prefetch: true,
 	output: 'server',
 	adapter: vercel({
-		webAnalytics: { enabled: true }
+		webAnalytics: { enabled: true },
+		imagesConfig: {
+			sizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+			domains: [],
+			remotePatterns: [],
+			formats: ['image/avif', 'image/webp']
+		}
 	})
 })
