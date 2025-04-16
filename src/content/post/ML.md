@@ -1,6 +1,6 @@
 ---
 title: "ML? Noooo!"
-description: "Before VIT I had no idea about ML, but now after giving all these examination and getting some hands on experience with ML, 'Pick the right tool for the right job' -- has been proven again"
+description: "I had no idea about ML, but now after giving all these examination and getting some hands on experience with ML, 'Pick the right tool for the right job'"
 publishDate: "16 Apr 2025"
 tags: ["ml", "thoughts"]
 ---
