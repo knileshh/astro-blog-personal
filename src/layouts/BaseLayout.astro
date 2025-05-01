@@ -8,6 +8,7 @@ import ThemeProvider from '@/components/ThemeProvider.astro'
 
 import { siteConfig } from '@/site-config'
 
+import { Analytics } from '@vercel/analytics/react';
 interface Props {
 	meta: SiteMeta
 }
@@ -31,5 +32,6 @@ const {
 			<slot />
 			<Footer />
 		</main>
+		<Analytics />
 	</body>
 </html>
